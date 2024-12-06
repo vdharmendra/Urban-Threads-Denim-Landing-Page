@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Threads Denim | Premium Denim for the Modern World</title>
+    <meta name="description" content="Explore Urban Threads Denim for stylish, high-quality denim that merges modern trends with timeless craftsmanship. From jeans to jackets, our collection is designed to fit your life. Discover your perfect fit today.">
+    <meta name="keyword" content="urban denim, premium denim, modern denim, denim jeans, denim jackets, stylish denim, denim clothing, quality denim, urban fashion, timeless denim">
+
+    <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--  -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MAIN SECTION -->
+    <div id="hero">
+        <div class="navbar anim">
+            <img src="./img/logo.png" alt="" class="logo">
+
+            <div class="user">
+                <button type="button">Exprole</button>
+                <i class="bi bi-person-fill"></i>
+            </div>
+        </div>
+
+        <!-- CONATINER SECTINO -->
+        <div class="container ">
+            <div class="banner-content">
+                <h5 class="anim">Bold, Authentic, Urban, Timeless Denim</h5>
+                <h1 class="anim">Denim That Defines Your Style</h1>
+                <p class="anim">At Urban Threads Denim, we craft premium denim that combines modern design with classic comfort. Whether you're dressing up or keeping it casual, our collection offers the perfect fit, style, and durability for every urban adventure.</p>
+                <input class="anim" type="submit" name="" id="" placeholder="" value="Shop the Collection">
+            </div>
+        </div>
+
+        <div class="slider anim">
+            <i class="bi bi-arrow-left" id="prev"></i>
+            <div class="preview">
+                <img src="./img/a1.jpg" alt="" class="thumbnail active">
+                <img src="./img/a2.jpg" alt="" class="thumbnail">
+                <img src="./img/a3.jpg" alt="" class="thumbnail">
+                <img src="./img/a4.jpg" alt="" class="thumbnail">
+                <img src="./img/a5.jpg" alt="" class="thumbnail">
+                
+            </div>
+            <i class="bi bi-arrow-right" id="next"></i>
+        </div>
+    </div>
+    
+    <script>
+        var prev = document.getElementById("prev");
+        var next = document.getElementById("next");
+        var thumbnail = document.getElementsByClassName("thumbnail");
+        var hero = document.getElementById("hero");
+
+
+        var backgroundImg = new Array (
+            "img/a1.jpg",
+            "img/a2.jpg",
+            "img/a3.jpg",
+            "img/a4.jpg",
+            "img/a5.jpg",
+        );
+
+        let i = 0;
+        next.onclick = function(){
+            if(i < 4){
+                hero.style.backgroundImage = 'url("'+backgroundImg[i+1]+'")';
+                thumbnail[i].classList.remove("active");
+                thumbnail[i+1].classList.add("active");
+                i++;
+            }
+        }
+        prev.onclick = function(){
+            if(i > 0){
+                hero.style.backgroundImage = 'url("'+backgroundImg[i-1]+'")';
+                thumbnail[i].classList.remove("active");
+                thumbnail[i-1].classList.add("active");
+                i--;
+            }
+        }
+    </script>
+</body>
+</html>
