@@ -50,6 +50,7 @@
 <a href="https://www.behance.net/gallery/214199015/Urban-Threads-Denim-Landing-Page" target="_blank" >
 <img src="./img/BG.png" width="275px"/>
 </a>
+<br />
 <span>Cover</span><br/>
 <a href="https://www.behance.net/gallery/214199015/Urban-Threads-Denim-Landing-Page" target="_blank" >
 <img src="./img/cover.png" width="575px"/>
